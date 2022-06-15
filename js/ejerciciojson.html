@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejerciciojson</title>
+</head>
+
+<body>
+    <ul id="resultado"></ul>
+    <script>
+
+        var piezas = {
+            "piezas": [
+                {
+                    "name": "Cutter",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["cutter.png", "cutter2.png", "cutter3.png"],
+                    "price": 30,
+                    "website": "https://www.fullertool.com/product/5pc-pro-bolt-cutter-assortment/"
+                },
+                {
+                    "name": "Axe",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["axe.png", "axe2.png", "axe3.png"],
+                    "price": 10,
+                    "website": "https://www.fullertool.com/product/1-1-2-lb-graphite-core-axe/"
+                },
+                {
+                    "name": "Wrench",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["wrench.png", "wrench2.png", "wrench4.png"],
+                    "price": 5,
+                    "website": "https://www.fullertool.com/product/pro-metric-combination-wrenches/"
+                },
+                {
+                    "name": "pipe wrench",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["pipewrench.png", "pipewrench2.png", "pipewrenchmaxi.png"],
+                    "price": 10,
+                    "website": "https://www.fullertool.com/product/pro-adjustable-pipe-wrenches/"
+                },
+                {
+                    "name": "Hammer",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["hammer.png", "hammerchico.png", "hammerbig.png"],
+                    "price": 3,
+                    "website": ""
+                },
+                {
+                    "name": "Screwdriver",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["screwdriver.png", "screwdrivermaxi.png", "screwdrivermin.png"],
+                    "price": 1,
+                    "website": ""
+                },
+                {
+                    "name": "Ruler",
+                    "kind": "tool",
+                    "quantity": 1,
+                    "picture": ["ruler.png"],
+                    "price": 5,
+                    "website": "https://www.fullertool.com/product/slot-head-pro-screwdrivers/"
+                },
+                {
+                    "name": "motor",
+                    "kind": "part",
+                    "quantity": 1,
+                    "picture": ["motor.png"],
+                    "price": 30,
+                    "website": "https://torro.lv/tubular-motors/AM35MEL-RF-6-28-rf-radio-control"
+                },
+                {
+                    "name": "Platine",
+                    "kind": "part",
+                    "quantity": 4,
+                    "picture": ["Platine.png", "Platinebig.png"],
+                    "price": 55,
+                    "website": "https://www.torro-shop.de/24-GHz-Platine-Leopard"
+                },
+                {
+                    "name": "Wechselquarze",
+                    "kind": "part",
+                    "quantity": 1,
+                    "picture": ["Wechselquarze.png", "quarze.png"],
+                    "price": 25,
+                    "website": "https://www.torro-shop.de/wechselquarze-quarze-no-02-fuer-panzer-fernbedienung-der-heng-long-panzer"
+                }
+            ]
+        };
+
+        var myobjeto = JSON.parse(JSON.stringify(piezas));
+
+
+        function crearlista(myobjeto) {
+
+            var resultado = document.getElementById("resultado");
+            for(let i=0;i< myobjeto.piezas;i++){
+
+
+                let li = document.createElement("li");
+                resultado.appendChild(li);
+                
+                li.textContent = myobjeto.piezas[i].name;
+
+            }
+
+
+
+
+
+        }
+
+        crearlista(myobjeto);
+
+
+    </script>
+
+   
+</body>
+
+</html>

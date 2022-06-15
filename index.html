@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+  <title>Store Meter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="css/storemeter.css" rel="stylesheet" type="text/css" />
+
+
+
+  <div class="contenidocabecera">
+    <h1>Store Meter</h1>
+  </div>
+
+</header>
+
+<body>
+
+  <div id="contenido">
+
+    <div class="row">
+      <div class="col-12">
+        <form action="index.html" method="POST">
+          <h3>Insert the piece you wish to search</h3>
+          <div id="botones">
+            <button type="button" id="grid" class="btn btn-link"> </button>
+            <button type="button" id="lista" class="btn btn-link"> </button>
+
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="busqueda" placeholder="Name" />
+            <input type="text" class="form-control" id="tipo" placeholder="Type" />
+            <input type="number" class="form-control" id="rangomenor" placeholder="Lower price" />
+            <input type="number" class="form-control" id="rangomayor" placeholder="Higher price" />
+
+            <select class="form-control" id="price" name="Price">
+              <option selected>Price</option>
+              <option value="cheaper">Price (Cheaper)</option>
+              <option value="expensive">Price (More expensive)</option>
+
+            </select>
+          </div>
+        </form>
+
+        <div id="tablero"></div>
+      </div>
+    </div>
+
+
+    </div>
+    
+
+
+    <div class="modal fade" id="listado" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="nombre" class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          </div>
+          <div class="modal-body">
+
+            <ul>
+              <li>
+                <p id="tipos"></p>
+              </li>
+
+              <li>
+                <p id="cantidad"></p>
+              </li>
+
+
+
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                  <p id="foto1"></p>
+                  
+                  </div>
+                  <div class="carousel-item">
+                    <p id="foto2"></p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="foto3"></p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+
+
+
+              <li>
+                <p id="precio"></p>
+
+              </li>
+              <li>
+                <p id="web-proveedor"></p>
+              </li>
+
+
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+
+    <div class="contenidofooter" id="mostrarmas">
+
+      <img src="img/demeterlogodef.png" alt="demeter" />
+
+    </div>
+
+  </footer>
+  </div>
+
+</body>
+
+
+<script src="js/storemeter.js">
+</script>
+
+
+</html>
